@@ -27,7 +27,7 @@ $data = mysqli_query($koneksi, 'SELECT * FROM mahasiswa');
 
     <div class="row">
       <div class="col">
-        <a href="create.php" class="btn btn-primary">Tambah Data Mahasiswa</a>
+        <a href="/mahasiswa/create.php" class="btn btn-primary">Tambah Data Mahasiswa</a>
       </div>
     </div>
 
@@ -51,7 +51,7 @@ $data = mysqli_query($koneksi, 'SELECT * FROM mahasiswa');
                 <td><?= $mahasiswa['nama'] ?></td>
                 <td><?= $mahasiswa['nim'] ?></td>
                 <td>
-                  <button class="btn btn-sm btn-info">Detail</button>
+                  <a href="/mahasiswa/show.php?id=<?= $mahasiswa['id'] ?>" class="btn btn-sm btn-info">Detail</a>
                   <a href="/mahasiswa/edit.php?id=<?= $mahasiswa['id'] ?>" class="btn btn-sm btn-warning">Edit</a>
                   <a href="/mahasiswa/destroy.php?id=<?= $mahasiswa['id'] ?>" class="btn btn-sm btn-danger">Hapus</a>
                 </td>
