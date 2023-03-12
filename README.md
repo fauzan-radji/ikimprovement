@@ -2,15 +2,13 @@
 
 Website IKI
 
-1. Bikin tabel di mahasiswa.php
-2. Bikin database di phpmyadmin `db_mahasiswa`
-3. Bikin tabel di phpmyadmin `mahasiswa`
+1. Clone this repository
+2. Make database named db_mahasiswa
+3. Make table in `db_mahasiswa` named `mahasiswa`
 
-   | id  | nama         | nim      |
-   | --- | ------------ | -------- |
-   | 1   | Fauzan Radji | 53142100 |
-
-4. Bikin tabel di mahasiswa.php dinamis sesuai dengan isi tabel `mahasiswa`
+| id                                   | nama            | nim           |
+| ------------------------------------ | --------------- | ------------- |
+| `INT` `PRIMARY KEY` `AUTO INCREMENT` | `VARCHAR (100)` | `VARCHAR (9)` |
 
 # Create
 

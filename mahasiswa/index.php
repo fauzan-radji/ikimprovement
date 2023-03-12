@@ -1,5 +1,5 @@
 <?php
-require_once 'koneksi.php';
+require_once '../koneksi.php';
 
 $data = mysqli_query($koneksi, 'SELECT * FROM mahasiswa');
 
@@ -16,20 +16,7 @@ $data = mysqli_query($koneksi, 'SELECT * FROM mahasiswa');
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg bg-dark navbar-dark mb-4">
-    <div class="container">
-      <a class="navbar-brand" href="#">SesukaHatiKalian</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav">
-          <a class="nav-link" href="index.php">Home</a>
-          <a class="nav-link" href="mahasiswa.php">Mahasiswa</a>
-        </div>
-      </div>
-    </div>
-  </nav>
+  <?php include '../partials/nav.php' ?>
 
   <div class="container">
     <div class="row">
@@ -65,8 +52,8 @@ $data = mysqli_query($koneksi, 'SELECT * FROM mahasiswa');
                 <td><?= $mahasiswa['nim'] ?></td>
                 <td>
                   <button class="btn btn-sm btn-info">Detail</button>
-                  <button class="btn btn-sm btn-warning">Edit</button>
-                  <button class="btn btn-sm btn-danger">Hapus</button>
+                  <a href="/mahasiswa/edit.php?id=<?= $mahasiswa['id'] ?>" class="btn btn-sm btn-warning">Edit</a>
+                  <a href="/mahasiswa/destroy.php?id=<?= $mahasiswa['id'] ?>" class="btn btn-sm btn-danger">Hapus</a>
                 </td>
               </tr>
             <?php
